@@ -33,7 +33,7 @@ To run the application, execute the following commands in the terminal:
 ```bash
 mvn clean install
 java -jar target/tlias-web-management-0.0.1-SNAPSHOT.jar
-
+```
 
 Alternatively, you can run the application directly using Maven:
 
