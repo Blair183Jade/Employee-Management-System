@@ -1,0 +1,39 @@
+spring:
+  #数据库连接信息
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/employee
+    username: root
+    password:
+  #文件上传的配置
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+#Mybatis配置
+#mybatis:
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#    map-underscore-to-camel-case: true
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+  type-aliases-package: com.itheima.domain # adjust to your domain package
+  type-handlers-package: com.itheima.typehandler # adjust if you use custom type handlers
+  mapper-scan: com.itheima.mapper # add this line for scanning your mappers
+
+
+
+#阿里云OSS
+aliyun:
+  oss:
+    endpoint: https://oss-cn-hangzhou.aliyuncs.com
+#    保留课程演示的id和密码
+    accessKeyId: LTAI4GCH1vX6DKqJWxd6nEuW
+    accessKeySecret: yBshYweHOpqDuhCArrVHwIiBKpyqSL
+    bucketName: web-tlias
+#spring事务管理日志
+logging:
+  level:
+    org.springframework.jdbc.support.JdbcTransactionManager: debug

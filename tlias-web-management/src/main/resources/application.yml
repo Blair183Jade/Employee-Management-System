@@ -1,0 +1,36 @@
+spring:
+  # Database connection settings
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver  # MySQL JDBC driver
+    url: jdbc:mysql://localhost:3306/employee  # URL of the database
+    username: root  # Database username
+    password:  # Database password, ensure to set this in production securely
+
+  # Configuration for file uploads
+  servlet:
+    multipart:
+      max-file-size: 10MB  # Maximum size for uploaded files
+      max-request-size: 100MB  # Maximum size for multipart/form-data requests
+
+# Configuration settings for MyBatis
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl  # Implementation for MyBatis logging
+    map-underscore-to-camel-case: true  # Map database columns in underscore style to camel case properties
+  type-aliases-package: com.itheima.domain  # Package containing MyBatis domain classes
+  type-handlers-package: com.itheima.typehandler  # Package containing MyBatis custom type handlers
+  mapper-scan: com.itheima.mapper  # Base package for scanning MyBatis mapper interfaces
+
+# Configuration for Alibaba Cloud OSS
+aliyun:
+  oss:
+    endpoint: https://oss-cn-hangzhou.aliyuncs.com  # OSS service endpoint
+    # Placeholder keys for demonstration purposes; replace with your actual keys
+    accessKeyId: LTAI4GCH1vX6DKqJWxd6nEuW  # Access key ID
+    accessKeySecret: yBshYweHOpqDuhCArrVHwIiBKpyqSL  # Access key secret
+    bucketName: web-tlias  # Bucket name
+
+# Configuration for logging transaction management within Spring
+logging:
+  level:
+    org.springframework.jdbc.support.JdbcTransactionManager: debug  # Set logging level to debug for transaction management

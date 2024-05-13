@@ -1,0 +1,15 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="tlias-web-management:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/tlias_web_management_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="tlias-web-management/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="javaee-facet-classes" facet="tlias-web-management/web/Web" />
+          <element id="module-output" name="docs" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="docs/web/Web" />
+    </root>
+  </artifact>
+</component>
